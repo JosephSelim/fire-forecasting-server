@@ -17,9 +17,9 @@ private:
 	SOCKET server_socket;
 
 public:
-	ServerNode();
 	ServerNode(string IP, int PORT);
-	void potato();
+	void initServer();
 	void sendData(string IP, int PORT, double currentTemperature);
+	~ServerNode();
 };
 #endif // !SERVERNODE_H
