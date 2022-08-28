@@ -15,7 +15,7 @@ int main()
 	server.initServer();
 
 	while (true) {
-		server.sendData(IP, PORT, tempSensor.getTemperatureInCelsius());
+		server.sendData(tempSensor.getTemperatureInCelsius());
 		Sleep(1000);
 	}
 	

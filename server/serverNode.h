@@ -19,7 +19,7 @@ private:
 public:
 	ServerNode(string IP, int PORT);
 	void initServer();
-	void sendData(string IP, int PORT, double currentTemperature);
+	void sendData(double currentTemperature);
 	~ServerNode();
 };
 #endif // !SERVERNODE_H

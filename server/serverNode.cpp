@@ -60,7 +60,7 @@ void ServerNode::initServer() {
     printf("Data: %s\n", message);
 }
 
-void ServerNode::sendData(string IP, int PORT, double currentTemperature)
+void ServerNode::sendData(double currentTemperature)
 {
     char message[BUFFER] = {};
     strcpy(message, to_string(currentTemperature).c_str());
