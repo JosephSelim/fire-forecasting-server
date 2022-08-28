@@ -12,7 +12,7 @@ int main()
 	int PORT = 8888;
 	ServerNode server(IP, PORT);
 
-	server.potato();
+	server.initServer();
 
 	while (true) {
 		server.sendData(IP, PORT, tempSensor.getTemperatureInCelsius());

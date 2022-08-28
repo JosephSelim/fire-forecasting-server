@@ -6,7 +6,7 @@ ServerNode::ServerNode(string IP, int PORT)
     this->IP = IP;
     this->PORT = PORT;
 }
-void ServerNode::potato() {
+void ServerNode::initServer() {
     //system("title UDP Server");
 
     //sockaddr_in server, client;
@@ -70,6 +70,10 @@ void ServerNode::sendData(string IP, int PORT, double currentTemperature)
         printf("sendto() failed with error code: %d", WSAGetLastError());
     }
 
-    //closesocket(server_socket);
-    //WSACleanup();
+
+}
+ServerNode::~ServerNode()
+{
+    closesocket(server_socket);
+    WSACleanup();
 }
