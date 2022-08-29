@@ -17,7 +17,7 @@ add_executable(${PROJECT_NAME} unitTests.cpp)
 target_link_libraries(${PROJECT_NAME} 
 	PRIVATE
 		GTest::GTest
-		IClass
+		SensorNode
 )
 
 # TODO: Add tests and install targets if needed.
