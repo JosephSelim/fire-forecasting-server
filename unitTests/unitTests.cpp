@@ -10,8 +10,9 @@ TEST(Test_Suite_SensorNode, randomTempGeneratedWithinBoundaries)
 {
     SensorNode sensor;
     bool result=false ;
-    double expectedLowerBoundary = 20.0, expectedHigherBoundary = 50.0;
-    if (sensor.getTemperatureInCelsius() >= 20.0 && sensor.getTemperatureInCelsius() <= 50.0)
+    double expectedLowerBoundary = 20.0, expectedHigherBoundary = 25.0;
+    double currentTemp = sensor.getTemperatureInCelsius();
+    if(currentTemp >= expectedLowerBoundary && currentTemp <= expectedHigherBoundary)
     {
         result = true;
     }

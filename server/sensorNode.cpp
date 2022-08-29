@@ -8,7 +8,6 @@ SensorNode::SensorNode()
 
 double SensorNode::randomTemperatureGenerator(double lowerTemperatureBoundary, double higherTemperatureBoundary)
 {
-	//srand((unsigned)time(NULL));
 	// TODO: Convert Random Int to a Normal Distributed Value, with Median Around 20 Celsius
 	double random = (((float)rand() / RAND_MAX) * (higherTemperatureBoundary - lowerTemperatureBoundary)) + lowerTemperatureBoundary;
 	return random;
