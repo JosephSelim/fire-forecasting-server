@@ -4,6 +4,13 @@
 cmake_minimum_required (VERSION 3.8)
 
 project ("fire-forecasting-server")
+set(CMAKE_CXX_STANDARD 14)
+
+enable_testing()
+include(GoogleTest)
+
+add_subdirectory(server)
+add_subdirectory(unitTests)
 
 # Add source to this project's executable.
 add_executable (fire-forecasting-server "fire-forecasting-server.cpp" "fire-forecasting-server.h" "server/serverNode.cpp" "server/serverNode.h" "server/sensorNode.h" "server/sensorNode.cpp")
